@@ -1,8 +1,8 @@
 import numpy as np
 
-def logit_to_prob(mod, x):
+def reg_to_prob(mod, x):
     """
-    Compute probabilities from a model’s raw predictions using the logistic (sigmoid) function.
+    Compute probabilities from a regression model’s raw predictions using the logistic (sigmoid) function.
 
     Parameters
     ----------
