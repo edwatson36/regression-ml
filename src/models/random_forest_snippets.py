@@ -6,6 +6,7 @@ Example: Best parameters search using GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
+from evaluation.regression_utils import reg_to_prob # custom function converting regression output to (0,1) classification.
 
 # Example parameter grid
 param_grid = {
@@ -24,7 +25,7 @@ print("Best Parameters:", grid_search.best_params_)
 print("Best CV Score:", grid_search.best_score_)
 
 # Obtain prediction from train set
-pred_rf = logit_to_prob(best_rf, x_train) # if RandomForestRegressor but want classification
+pred_rf = reg_to_prob(best_rf, x_train) # if RandomForestRegressor but want classification
 pred_rf = best_rf.predict_proba(x_train) # if RandomForestClassifier
 
 """
