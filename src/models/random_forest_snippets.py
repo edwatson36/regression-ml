@@ -2,7 +2,6 @@
 Example: Best parameters search using GridSearchCV
 """
 
-
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
